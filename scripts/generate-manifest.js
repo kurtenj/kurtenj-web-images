@@ -41,7 +41,7 @@ function naturalSort(a, b) {
 function main() {
   const images = [];
   collectImages(repoRoot, repoRoot, images);
-  images.sort(naturalSort);
+  images.sort((a, b) => naturalSort(b, a));
 
   const manifest = images.map((file, index) => ({
     id: index + 1,
